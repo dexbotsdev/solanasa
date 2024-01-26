@@ -52,7 +52,7 @@ export default function IntervalCircle({
 
   useEffect(() => {
     if (!run || !documentVisible) {
-      globalThis.clearInterval(cacheTimer.current)
+      // globalThis.clearInterval(cacheTimer.current)
     } else {
       const timeoutId = globalThis.setInterval(() => {
         if (run && documentVisible) setProgressPercent((old) => old + (1 / duration) * updateDelay)
@@ -90,12 +90,12 @@ export default function IntervalCircle({
   useImperativeHandle(
     componentRef,
     () =>
-      ({
-        currentProgressPercent: progressPercent % 1,
-        restart() {
-          setProgressPercent(0)
-        }
-      } as IntervalCircleHandler)
+    ({
+      currentProgressPercent: progressPercent % 1,
+      restart() {
+        setProgressPercent(0)
+      }
+    } as IntervalCircleHandler)
   )
 
   return (
