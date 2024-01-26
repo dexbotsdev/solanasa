@@ -1,16 +1,17 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
-
+node_modules
+.next
+.vscode
 # vscode local history
 .history
-
+out
 # testing
 /coverage
 
 # next.js
-/.next/
+/.next
 
 # production
 /build

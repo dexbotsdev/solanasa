@@ -90,6 +90,10 @@ export default function PageLayout(props: {
   return (
     <div
       style={{
+        backgroundColor: '#141041', 
+        background: "linear-gradient(180deg, rgba(54,5,106,1) 0%, rgba(5,5,87,1) 35%, rgba(25,3,55,1) 100%)",
+        backgroundSize: '100% 95%',
+        backgroundRepeat: 'no-repeat',
         padding:
           'env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px)',
         position: 'relative',
@@ -124,8 +128,7 @@ export default function PageLayout(props: {
       ) : (
         <>
           <Navbar className="grid-area-a" />
-          <SideMenu className="flex-container grid-area-b mobile:hidden" />
-        </>
+         </>
       )}
       <main
         // always occupy scrollbar space
@@ -438,13 +441,12 @@ function Navbar({
       <Link href="/">
         <Image
           className={`cursor-pointer ${inDev ? 'hue-rotate-60' : ''} mobile:hidden`}
+          style={{width:"143px"}}
           src="/logo/logo-with-text.svg"
         />
       </Link>
 
-      <Row className="gap-6 items-center mobile:hidden">
-        <MessageBoardWidget />
-        <TxVersionWidget />
+      <Row className="gap-6 items-center mobile:hidden"> 
         <WalletWidget />
       </Row>
     </Row>
@@ -477,8 +479,7 @@ function Navbar({
         </Link>
       )}
 
-      <Row className="gap-3 items-center justify-self-end">
-        <TxVersionWidget />
+      <Row className="gap-3 items-center justify-self-end"> 
         <WalletWidget />
       </Row>
     </Grid>

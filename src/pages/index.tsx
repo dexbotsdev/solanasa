@@ -19,13 +19,13 @@ import { useDocumentScrollActionDetector } from '@/hooks/useScrollActionDetector
 
 function HomePageContainer({ children }: { children?: ReactNode }) {
   useDocumentScrollActionDetector()
-  useDocumentMetaTitle('Raydium')
+  useDocumentMetaTitle('Solaunch')
   return (
     <div
       className="flow-root overflow-x-hidden"
       style={{
-        backgroundColor: '#141041',
-        backgroundImage: "url('/backgroundImages/home-page-bg-lights.webp')",
+        backgroundColor: '#141041', 
+        background: "linear-gradient(180deg, rgba(54,5,106,1) 0%, rgba(5,5,87,1) 35%, rgba(25,3,55,1) 100%)",
         backgroundSize: '100% 95%',
         backgroundRepeat: 'no-repeat'
       }}
@@ -40,12 +40,12 @@ function HomePageNavbar() {
   const { push } = useRouter()
   return (
     <Row className="justify-between mobile:justify-center py-12 px-[min(160px,8vw)]">
-      <Image src="/logo/logo-with-text.svg" />
+      <Image src="/logo/logo-with-text.svg"  style={{width:"163px"}}/>
       {!isMobile && (
         <Button
-          className="frosted-glass-teal"
+          className="btn-main"
           onClick={() => {
-            push('/swap')
+            push('/launchPads')
           }}
         >
           Launch app
@@ -60,12 +60,12 @@ function HomePageSection0() {
   const { push } = useRouter()
   const { tvl, totalvolume } = useHomeInfo()
   return (
-    <section className="grid-child-center grid-cover-container mb-16 relative">
+    <section className="grid-child-center grid-cover-container mb-4 relative">
       <Image src="/backgroundImages/home-bg-element-1.png" className="w-[744px] mobile:w-[394px]" />
       <div className="grid-cover-content children-center">
-        <div className="font-light text-[64px] mobile:text-[30px] text-white mb-4 mt-14 mobile:mt-9 leading-[60px] mobile:leading-[32px]">
-          An avenue for <br />
-          the evolution of{' '}
+        <div className="font-light text-[64px] mobile:text-[30px] text-white mb-4 mobile:mt-2 leading-[60px] mobile:leading-[32px]">
+          Bringing NASA 
+          to SOLANA {' '}
           <span
             className="font-bold text-transparent bg-clip-text"
             style={{
@@ -78,14 +78,14 @@ function HomePageSection0() {
           </span>
         </div>
         <div className="font-normal text-xl mobile:text-base text-[#adc6ff] mb-6">
-          Light-speed <b>swaps</b>. Next-level <b>liquidity</b>. {isMobile ? <br /> : ''} Friction-less <b>yield</b>.
+          Your Friendly <b>Launchpad</b>. Next-level <b>Technologies</b>. {isMobile ? <br /> : ''} Auto-KYC <b>Highly Secure</b>.
         </div>
         {/* two button */}
         <Row className="gap-8 mobile:gap-4 mb-16 mobile:mb-6 grid grid-cols-2-fr">
           <Button
             className="home-rainbow-button-bg text-white mobile:text-xs px-5 mobile:px-4"
             onClick={() => {
-              push('/swap')
+              push('/launchPads')
             }}
           >
             <Row className="items-center gap-2">
