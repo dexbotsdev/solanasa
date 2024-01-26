@@ -4,7 +4,6 @@ import { useRouter } from 'next/router'
 import { WalletAdapterNetwork, WalletError, Adapter } from '@solana/wallet-adapter-base'
 import { ConnectionProvider, WalletProvider } from '@solana/wallet-adapter-react'
 import {
-  BackpackWalletAdapter,
   BitKeepWalletAdapter,
   BitpieWalletAdapter,
   BraveWalletAdapter,
@@ -68,7 +67,6 @@ export function SolanaWalletProviders({ children }: { children?: ReactNode }) {
       new ExodusWalletAdapter({ endpoint }),
       new CloverWalletAdapter(),
       new CoinhubWalletAdapter(),
-      new BackpackWalletAdapter(),
       new WalletConnectWalletAdapter({
         network: WalletAdapterNetwork.Mainnet, // const only, cannot use condition to use dev/main, guess is relative to walletconnect connection init
         options: {
