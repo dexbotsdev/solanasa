@@ -13,7 +13,6 @@
     "mutate-versions": "yarn ncu -u",
     "run-misc": "cross-env TS_NODE_PROJECT=tsconfig.commonjs.json yarn ts-node",
     "build-ido-json": "yarn run-misc ./misc/build-ido-json.ts",
-    "prepare": "husky install",
     "push-frontend": "git push --force frontend master"
   },
   "sideEffects": false,
