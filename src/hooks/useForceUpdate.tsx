@@ -34,7 +34,7 @@ export function useForceUpdate({
       cacheTimer.current = id
       return () => globalThis.clearInterval(id)
     } else {
-      globalThis.clearInterval(cacheTimer.current)
+      //globalThis.clearInterval(cacheTimer.current)
     }
   }, [canLooplyForceUpdate, loop])
 
