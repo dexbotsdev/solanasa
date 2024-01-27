@@ -24,8 +24,8 @@ function HomePageContainer({ children }: { children?: ReactNode }) {
     <div
       className="flow-root overflow-x-hidden"
       style={{
-        backgroundColor: '#141041', 
-        background: "linear-gradient(180deg, rgba(54,5,106,1) 0%, rgba(5,5,87,1) 35%, rgba(25,3,55,1) 100%)",
+        backgroundColor: '#0b234e',
+        background: "linear-gradient(#0b234e 0%, #0b234e 35%, #0b234e 100%)",
         backgroundSize: '100% 95%',
         backgroundRepeat: 'no-repeat'
       }}
@@ -40,7 +40,7 @@ function HomePageNavbar() {
   const { push } = useRouter()
   return (
     <Row className="justify-between mobile:justify-center py-12 px-[min(160px,8vw)]">
-      <Image src="/logo/logo-with-text.svg"  style={{width:"163px"}}/>
+      <Image src="/logo/logo-with-text.svg" style={{ width: "163px" }} />
       {!isMobile && (
         <Button
           className="btn-main"
@@ -61,10 +61,9 @@ function HomePageSection0() {
   const { tvl, totalvolume } = useHomeInfo()
   return (
     <section className="grid-child-center grid-cover-container mb-4 relative">
-      <Image src="/backgroundImages/home-bg-element-1.png" className="w-[744px] mobile:w-[394px]" />
       <div className="grid-cover-content children-center">
         <div className="font-light text-[64px] mobile:text-[30px] text-white mb-4 mobile:mt-2 leading-[60px] mobile:leading-[32px]">
-          Bringing NASA 
+          Bringing NASA
           to SOLANA {' '}
           <span
             className="font-bold text-transparent bg-clip-text"

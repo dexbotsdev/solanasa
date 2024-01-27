@@ -60,14 +60,14 @@ import SetTransactionPriority from '@/pageComponents/settings/SetTransactionPrio
 export default function PageLayout(props: {
   /** only mobile  */
   mobileBarTitle?:
-    | string
-    | {
-        items: DropdownTitleInfoItem[]
-        currentValue?: string
-        onChange?: (value: string) => void
-        urlSearchQueryKey?: string
-        drawerTitle?: string
-      }
+  | string
+  | {
+    items: DropdownTitleInfoItem[]
+    currentValue?: string
+    onChange?: (value: string) => void
+    urlSearchQueryKey?: string
+    drawerTitle?: string
+  }
   metaTitle?: string
   children?: ReactNode
   contentBanner?: ReactNode
@@ -90,8 +90,8 @@ export default function PageLayout(props: {
   return (
     <div
       style={{
-        backgroundColor: '#141041', 
-        background: "linear-gradient(180deg, rgba(54,5,106,1) 0%, rgba(5,5,87,1) 35%, rgba(25,3,55,1) 100%)",
+        backgroundColor: '#0b234e',
+        background: "linear-gradient(#0b234e 0%, #0b234e 35%, #0b234e 100%)",
         backgroundSize: '100% 95%',
         backgroundRepeat: 'no-repeat',
         padding:
@@ -128,11 +128,11 @@ export default function PageLayout(props: {
       ) : (
         <>
           <Navbar className="grid-area-a" />
-         </>
+        </>
       )}
       <main
         // always occupy scrollbar space
-        className="flex flex-col PageLayoutContent relative grid-area-c bg-gradient-to-b from-[#0c0927] to-[#110d36] rounded-tl-3xl mobile:rounded-none"
+        className="flex flex-col PageLayoutContent relative grid-area-c bg-gradient-to-b from-[#0b234e] to-[#0f234e] rounded-tl-3xl mobile:rounded-none"
         style={{
           overflowX: 'hidden',
           overflowY: 'scroll'
@@ -145,8 +145,7 @@ export default function PageLayout(props: {
         <DisclaimerDialog />
         <div
           className={twMerge(
-            `grow h-0 isolate flex-container p-12 ${
-              props.contentButtonPaddingShorter ?? props.contentYPaddingShorter ? 'pb-4' : ''
+            `grow h-0 isolate flex-container p-12 ${props.contentButtonPaddingShorter ?? props.contentYPaddingShorter ? 'pb-4' : ''
             } ${props.contentTopPaddingShorter ?? props.contentYPaddingShorter ? 'pt-5' : ''} mobile:py-2 mobile:px-3`,
             props.contentClassName
           )}
@@ -238,8 +237,6 @@ function VersionTooOldDialog() {
           className={twMerge(`p-8 rounded-3xl w-[min(480px,95vw)] mx-8 border-1.5 border-[rgba(171,196,255,0.2)]`)}
           size="lg"
           style={{
-            background:
-              'linear-gradient(140.14deg, rgba(0, 182, 191, 0.15) 0%, rgba(27, 22, 89, 0.1) 86.61%), linear-gradient(321.82deg, #18134D 0%, #1B1659 100%)',
             boxShadow: '0px 8px 48px rgba(171, 196, 255, 0.12)'
           }}
         >
@@ -421,14 +418,14 @@ function Navbar({
 }: {
   className?: string
   barTitle?:
-    | string
-    | {
-        items: DropdownTitleInfoItem[]
-        currentValue?: string
-        onChange?: (value: string) => void
-        urlSearchQueryKey?: string
-        drawerTitle?: string
-      }
+  | string
+  | {
+    items: DropdownTitleInfoItem[]
+    currentValue?: string
+    onChange?: (value: string) => void
+    urlSearchQueryKey?: string
+    drawerTitle?: string
+  }
   style?: CSSProperties
   // TODO: move it into useAppSetting()
   onOpenMenu?: () => void
@@ -441,12 +438,12 @@ function Navbar({
       <Link href="/">
         <Image
           className={`cursor-pointer ${inDev ? 'hue-rotate-60' : ''} mobile:hidden`}
-          style={{width:"143px"}}
+          style={{ width: "143px" }}
           src="/logo/logo-with-text.svg"
         />
       </Link>
 
-      <Row className="gap-6 items-center mobile:hidden"> 
+      <Row className="gap-6 items-center mobile:hidden">
         <WalletWidget />
       </Row>
     </Row>
@@ -479,7 +476,7 @@ function Navbar({
         </Link>
       )}
 
-      <Row className="gap-3 items-center justify-self-end"> 
+      <Row className="gap-3 items-center justify-self-end">
         <WalletWidget />
       </Row>
     </Grid>
@@ -549,9 +546,8 @@ function MobileDropdownTitle({
                 return (
                   <div
                     key={value}
-                    className={`py-4 px-6 font-normal ${
-                      value === currentValue ? 'text-white' : 'text-[rgba(171,196,255,0.5)] '
-                    }`}
+                    className={`py-4 px-6 font-normal ${value === currentValue ? 'text-white' : 'text-[rgba(171,196,255,0.5)] '
+                      }`}
                     onClick={() => {
                       onChange?.(value)
                       setCurrentValue(value)
@@ -719,18 +715,16 @@ function LinkItem({
     <Link
       href={href}
       noTextStyle
-      className={`group block py-2.5 mobile:py-2 px-4 mobile:px-1 rounded-xl mobile:rounded-lg hover:bg-[rgba(57,208,216,0.05)] ${
-        isCurrentRoutePath ? 'bg-[rgba(57,208,216,0.1)]' : ''
-      }`}
+      className={`group block py-2.5 mobile:py-2 px-4 mobile:px-1 rounded-xl mobile:rounded-lg hover:bg-[rgba(57,208,216,0.05)] ${isCurrentRoutePath ? 'bg-[rgba(57,208,216,0.1)]' : ''
+        }`}
     >
       <Row className="items-center">
         <div className="grid bg-gradient-to-br from-[rgba(57,208,216,0.2)] to-[rgba(57,208,216,0)] rounded-lg p-1.5 mr-3">
           <Icon size={isMobile ? 'xs' : 'sm'} iconSrc={icon} />
         </div>
         <Row
-          className={`grow items-center justify-between text-[#ACE3E5] ${
-            isCurrentRoutePath ? 'text-[rgba(57,208,216,1)]' : ''
-          } text-sm mobile:text-[0.85rem] font-medium`}
+          className={`grow items-center justify-between text-[#ACE3E5] ${isCurrentRoutePath ? 'text-[rgba(57,208,216,1)]' : ''
+            } text-sm mobile:text-[0.85rem] font-medium`}
         >
           <div>{children}</div>
           {isExternalLink && (
@@ -772,9 +766,8 @@ function OptionItem({
           heroIconName={heroIconName}
         />
         <span
-          className={`text-[#ACE3E5] text-sm mobile:text-[0.85rem] font-medium flex-grow ${
-            href ? 'group-hover:text-[rgba(57,208,216,1)]' : ''
-          }`}
+          className={`text-[#ACE3E5] text-sm mobile:text-[0.85rem] font-medium flex-grow ${href ? 'group-hover:text-[rgba(57,208,216,1)]' : ''
+            }`}
         >
           {children}
         </span>
@@ -961,9 +954,8 @@ function RpcConnectionFace() {
         >
           {currentEndPoint
             ? isLoading
-              ? `RPC (${
-                  (loadingCustomizedEndPoint?.name ?? extractRPCName(loadingCustomizedEndPoint?.url ?? '')) || ''
-                })`
+              ? `RPC (${(loadingCustomizedEndPoint?.name ?? extractRPCName(loadingCustomizedEndPoint?.url ?? '')) || ''
+              })`
               : `RPC (${(currentEndPoint?.name ?? extractRPCName(currentEndPoint.url)) || ''})`
             : '--'}
         </span>
@@ -1006,11 +998,10 @@ function RpcConnectionPanelPopover({ close: closePanel }: { close: () => void })
             >
               <Row className="items-center w-full">
                 <Row
-                  className={`${
-                    isCurrentEndPoint
-                      ? 'text-[rgba(255,255,255,0.85)]'
-                      : 'hover:text-white active:text-white text-white cursor-pointer'
-                  } items-center w-full`}
+                  className={`${isCurrentEndPoint
+                    ? 'text-[rgba(255,255,255,0.85)]'
+                    : 'hover:text-white active:text-white text-white cursor-pointer'
+                    } items-center w-full`}
                 >
                   {endPoint.name ?? '--'}
                   {endPoint.url === autoChoosedEndPoint?.url && <Badge className="self-center ml-2">recommended</Badge>}
@@ -1049,13 +1040,12 @@ function RpcConnectionPanelPopover({ close: closePanel }: { close: () => void })
         <Row className="border-[rgba(171,196,255,0.05)] items-center gap-3 p-4 mobile:py-4 mobile:px-2">
           <Input
             value={userCostomizedUrlText}
-            className={`px-2 py-2 border-1.5 flex-grow ${
-              switchConnectionFailed
-                ? 'border-[#DA2EEF]'
-                : userCostomizedUrlText === currentEndPoint?.url
+            className={`px-2 py-2 border-1.5 flex-grow ${switchConnectionFailed
+              ? 'border-[#DA2EEF]'
+              : userCostomizedUrlText === currentEndPoint?.url
                 ? 'border-[rgba(196,214,255,0.8)]'
                 : 'border-[rgba(196,214,255,0.2)]'
-            } rounded-xl min-w-[7em]`}
+              } rounded-xl min-w-[7em]`}
             inputClassName="font-medium text-[rgba(196,214,255,0.5)] placeholder-[rgba(196,214,255,0.5)]"
             placeholder="https://"
             onUserInput={(searchText) => {

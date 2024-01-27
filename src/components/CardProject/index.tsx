@@ -21,7 +21,7 @@ export default function CardProject({
 
     return (
         <Link href={link}>
-            <div className="w-full p-4 rounded-xl" style={{ background: "#181853" }}>
+            <div className="w-full p-4 rounded-xl" style={{ background: "#0c1f37" }}>
                 <a className="absolute top-0 left-0 h-full w-full z-10" href="/pool/animaliaprivate">
                 </a>
                 <div className="space-y-6 flex flex-col justify-between card-body">

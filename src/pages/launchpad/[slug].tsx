@@ -299,7 +299,7 @@ export default function Page() {
           <></>
         ) : (
           <>
-            <div className="w-full p-4 rounded-xl" style={{ background: "#181853" }}>
+            <div className="w-full p-4 rounded-xl" style={{ background: "#0c1f37" }}>
               <div className="rounded-xl overflow-hidden">
                 <img src={project?.coverUrl} alt="" />
               </div>
@@ -567,7 +567,7 @@ export default function Page() {
                 </div>
               </div>
             </div>
-            <div className="w-full p-4 rounded-xl" style={{ background: "#181853" }}>
+            <div className="w-full p-4 rounded-xl" style={{ background: "#0c1f37" }}>
               <div className="bg-gradient-card-project rounded-3xl h-fit">
                 <div className="bg-gradient-raise h-4 rounded-tl-3xl rounded-tr-3xl"></div>
 
