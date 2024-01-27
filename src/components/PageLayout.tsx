@@ -121,9 +121,6 @@ export default function PageLayout(props: {
       {isMobile ? (
         <>
           <Navbar className="grid-area-a" barTitle={props.mobileBarTitle} onOpenMenu={() => setIsSideMenuOpen(true)} />
-          <Drawer open={isSideMenuOpen} onClose={() => setIsSideMenuOpen(false)} onOpen={() => setIsSideMenuOpen(true)}>
-            {({ close }) => <SideMenu className="flex-container h-full" onClickCloseBtn={close} />}
-          </Drawer>
         </>
       ) : (
         <>
@@ -295,32 +292,25 @@ function DisclaimerDialog() {
         <div className="grow text-sm leading-normal text-[#abc4ffb3] scrollbar-width-thin overflow-auto h-96 mobile:h-12 rounded p-4 my-6 mobile:my-4 bg-[#141041]">
           <p className="mb-3">
             This website-hosted user interface (this "Interface") is an open source frontend software portal to the
-            Raydium protocol, a decentralized and community-driven collection of blockchain-enabled smart contracts and
-            tools (the "Raydium Protocol"). This Interface and the Raydium Protocol are made available by the Raydium
+            Solaunch Protocol, a decentralized and community-driven collection of blockchain-enabled smart contracts and
+            tools (the "Solaunch Protocol"). This Interface and the Solaunch Protocol are made available by the Raydium
             Holding Foundation, however all transactions conducted on the protocol are run by related permissionless
-            smart contracts. As the Interface is open-sourced and the Raydium Protocol and its related smart contracts
+            smart contracts. As the Interface is open-sourced and the Solaunch Protocol and its related smart contracts
             are accessible by any user, entity or third party, there are a number of third party web and mobile
-            user-interfaces that allow for interaction with the Raydium Protocol.
+            user-interfaces that allow for interaction with the Solaunch Protocol.
           </p>
           <p className="mb-3">
-            THIS INTERFACE AND THE RAYDIUM PROTOCOL ARE PROVIDED "AS IS", AT YOUR OWN RISK, AND WITHOUT WARRANTIES OF
-            ANY KIND. The Raydium Holding Foundation does not provide, own, or control the Raydium Protocol or any
+            THIS INTERFACE AND THE Solaunch Protocol ARE PROVIDED "AS IS", AT YOUR OWN RISK, AND WITHOUT WARRANTIES OF
+            ANY KIND. The Raydium Holding Foundation does not provide, own, or control the Solaunch Protocol or any
             transactions conducted on the protocol or via related smart contracts. By using or accessing this Interface
-            or the Raydium Protocol and related smart contracts, you agree that no developer or entity involved in
-            creating, deploying or maintaining this Interface or the Raydium Protocol will be liable for any claims or
+            or the Solaunch Protocol and related smart contracts, you agree that no developer or entity involved in
+            creating, deploying or maintaining this Interface or the Solaunch Protocol will be liable for any claims or
             damages whatsoever associated with your use, inability to use, or your interaction with other users of, this
-            Interface or the Raydium Protocol, including any direct, indirect, incidental, special, exemplary, punitive
+            Interface or the Solaunch Protocol, including any direct, indirect, incidental, special, exemplary, punitive
             or consequential damages, or loss of profits, digital assets, tokens, or anything else of value.
           </p>
           <p className="mb-3">
-            The Raydium Protocol is not available to residents of Belarus, the Central African Republic, The Democratic
-            Republic of Congo, the Democratic People's Republic of Korea, the Crimea, Donetsk People's Republic, and
-            Luhansk People's Republic regions of Ukraine, Cuba, Iran, Libya, Somalia, Sudan, South Sudan, Syria, the
-            USA, Yemen, Zimbabwe and any other jurisdiction in which accessing or using the Raydium Protocol is
-            prohibited (the "Prohibited Jurisdictions").
-          </p>
-          <p className="mb-3">
-            By using or accessing this Interface, the Raydium Protocol, or related smart contracts, you represent that
+            By using or accessing this Interface, the Solaunch Protocol, or related smart contracts, you represent that
             you are not located in, incorporated or established in, or a citizen or resident of the Prohibited
             Jurisdictions. You also represent that you are not subject to sanctions or otherwise designated on any list
             of prohibited or restricted parties or excluded or denied persons, including but not limited to the lists
@@ -391,21 +381,6 @@ function MigrateBubble() {
           Your wallet have old normal tokenAccount. Please migrate to ATA tokenAccount for safer transaction.
         </div>
       </Col>
-      <Row className="gap-8">
-        <Button
-          className=" mobile:flex-grow frosted-glass-teal w-40"
-          onClick={() => linkTo('https://v1.raydium.io/migrate/')}
-        >
-          Migrate
-        </Button>
-        <Button
-          className=" mobile:flex-grow ring-1.5 ring-inset ring-current opacity-50 text-[#ABC4FF] text-sm font-medium"
-          type="text"
-          onClick={() => linkTo('https://raydium.gitbook.io/raydium/updates/associated-token-account-migration')}
-        >
-          Learn More
-        </Button>
-      </Row>
     </Grid>
   )
 }
