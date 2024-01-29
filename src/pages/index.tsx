@@ -255,7 +255,7 @@ function HomePageSection2() {
             <div className="frosted-glass-teal p-3 mb-3 rounded-xl">
               <Icon iconSrc="/icons/home-pool.svg" />
             </div>
-            <div className="font-semibold text-lg text-white mb-2">OPEN-AI KYC/DOXX</div>
+            <div className="font-semibold text-lg text-white mb-2">OPEN-AI KYC</div>
             <div className="font-light text-[#c4d6ff] mb-5">
               The only platform that performs KYC using Open-AI and doxxes the community based on voting and AI Logorithms.
             </div>
