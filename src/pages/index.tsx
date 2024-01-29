@@ -77,73 +77,9 @@ function HomePageSection0() {
           </span>
         </div>
         <div className="font-normal text-xl mobile:text-base text-[#adc6ff] mb-6">
-          Your Friendly <b>Launchpad</b>. Next-level <b>Technologies</b>. {isMobile ? <br /> : ''} Auto-KYC <b>Highly Secure</b>.
+          Enter the gateway of <b>Solana Blockchain Launches</b>. {isMobile ? <br /> : ''} Auto-KYC <b>Highly Secure</b>.
         </div>
-        {/* two button */}
-        <Row className="gap-8 mobile:gap-4 mb-16 mobile:mb-6 grid grid-cols-2-fr">
-          <Button
-            className="home-rainbow-button-bg text-white mobile:text-xs px-5 mobile:px-4"
-            onClick={() => {
-              push('/launchPads')
-            }}
-          >
-            <Row className="items-center gap-2">
-              <div>Launch app</div>
-              <Icon heroIconName="chevron-right" size="xs" />
-            </Row>
-          </Button>
 
-          <Button
-            className="frosted-glass-teal text-white mobile:text-xs px-5 mobile:px-4 forsted-blur"
-            onClick={() => {
-              linkTo('https://raydium.gitbook.io/raydium/')
-            }}
-          >
-            <Row className="items-center gap-2">
-              <div>Read docs</div>
-              <Icon iconSrc="/icons/gitbook.svg" size="sm" />
-            </Row>
-          </Button>
-        </Row>
-        {/* two panels */}
-        <Row className="gap-6 mobile:gap-3 mb-9 grid grid-cols-2-fr">
-          <Card className="frosted-glass-smoke forsted-blur-sm rounded-3xl mobile:rounded-2xl p-6 mobile:py-3 mobile:px-6 mobile:min-w-[156px] min-w-[250px] tablet:min-w-[250px]">
-            <div className="text-sm text-[#adc6ff] mb-1 mobile:text-[8px]">TOTAL VALUE LOCKED</div>
-            {/* value */}
-            <Row className="justify-center text-xl mobile:text-xs font-normal text-white tracking-widest mobile:tracking-wider">
-              <div className="mr-1">$</div>
-              {tvl && (
-                <NumberJelly
-                  fractionLength={0}
-                  eachLoopDuration={400}
-                  totalDuration={8 * 60 * 1000}
-                  maxDeltaPercent={0.05}
-                  currentValue={tvl}
-                  initValue={tvl ? 0.999 * tvl : undefined}
-                />
-              )}
-            </Row>
-          </Card>
-
-          <Card className="frosted-glass-smoke forsted-blur-sm rounded-3xl mobile:rounded-2xl p-6 mobile:py-3 mobile:px-6 mobile:min-w-[156px] min-w-[250px] tablet:min-w-[250px]">
-            <div className="text-sm text-[#adc6ff] mb-1 mobile:text-[8px]">TOTAL TRADING VOLUME</div>
-            {/* value */}
-            <Row className="justify-center text-xl mobile:text-xs font-normal text-white tracking-widest mobile:tracking-wider">
-              <div className="mr-1">$</div>
-              {totalvolume && (
-                <NumberJelly
-                  fractionLength={0}
-                  eachLoopDuration={200}
-                  totalDuration={8 * 60 * 1000}
-                  maxDeltaPercent={0.05}
-                  currentValue={totalvolume}
-                  initValue={totalvolume ? 0.999 * totalvolume : undefined}
-                />
-              )}
-            </Row>
-          </Card>
-        </Row>
-        <Image src="/logo/build-on-slogan.svg" className="transform mobile:scale-75" />
       </div>
     </section>
   )
@@ -272,7 +208,7 @@ function HomePageSection2() {
             className="w-10 h-px my-2 mx-auto rounded-full"
             style={{ background: 'radial-gradient(39.84% 47.5% at 96.82% 58.33%, #39d0d8 0%, #2b6aff 100%)' }}
           />
-          <div className="text-lg">Raydium provides Ecosystem-Wide Liquidity for users and projects</div>
+          <div className="text-lg">Be part of Open Economy of the Future</div>
         </div>
 
         <Grid className="gap-6 grid-cols-3 tablet:grid-cols-1 mobile:grid-cols-1 justify-items-center">
@@ -286,10 +222,10 @@ function HomePageSection2() {
             <div className="frosted-glass-teal p-3 mb-3 rounded-xl">
               <Icon iconSrc="/icons/home-order-book-AMM.svg" />
             </div>
-            <div className="font-semibold text-lg text-white mb-2">Order Book AMM</div>
+            <div className="font-semibold text-lg text-white mb-2">THINK BIGGER</div>
             <div className="font-light text-[#c4d6ff] mb-5">
-              Raydium{"'"}s AMM interacts with OpenBook{"'"}s central limit order book, meaning that pools have access
-              to all order flow and liquidity on OpenBook, and vice versa.
+              Our platform runs on OpenAI end-to-end automated adaptive, data driven, micro-influencer analytics driven decisions
+              to select the Offerings.
             </div>
           </Card>
 
@@ -303,10 +239,9 @@ function HomePageSection2() {
             <div className="frosted-glass-teal p-3 mb-3 rounded-xl">
               <Icon iconSrc="/icons/home-yield.svg" />
             </div>
-            <div className="font-semibold text-lg text-white mb-2">Best Price Swaps</div>
+            <div className="font-semibold text-lg text-white mb-2">INTEGRATED SWAP</div>
             <div className="font-light text-[#c4d6ff] mb-5">
-              Raydium determines the best swap route among all pools in order to provide the best price for users, and
-              executes accordingly.
+              Our Platform determines the best swap outputs among all solana exchanges using the advanced Jupiter AG Protocol.
             </div>
           </Card>
 
@@ -320,10 +255,9 @@ function HomePageSection2() {
             <div className="frosted-glass-teal p-3 mb-3 rounded-xl">
               <Icon iconSrc="/icons/home-pool.svg" />
             </div>
-            <div className="font-semibold text-lg text-white mb-2">Premissionless Liquidity</div>
+            <div className="font-semibold text-lg text-white mb-2">OPEN-AI KYC/DOXX</div>
             <div className="font-light text-[#c4d6ff] mb-5">
-              Raydium enables the permissionless creation of liquidity pools and farms so projects can launch and
-              bootstrap liquidity in a decentralized manner.
+              The only platform that performs KYC using Open-AI and doxxes the community based on voting and AI Logorithms.
             </div>
           </Card>
         </Grid>
@@ -581,9 +515,7 @@ export default function HomePage() {
     <HomePageContainer>
       <HomePageNavbar />
       <HomePageSection0 />
-      <HomePageSection1 />
       <HomePageSection2 />
-      <HomePageFooter />
     </HomePageContainer>
   )
 }
